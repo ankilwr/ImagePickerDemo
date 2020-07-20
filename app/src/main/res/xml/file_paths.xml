@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <external-path name="androidQTest" path="." />
+
+    <external-path name="androidQTest_Images" path="images/"/>
+    <external-path name="androidQTest_Video" path="video/"/>
+    <external-path name="androidQTest_Audio" path="audio/"/>
+    <external-path name="androidQTest_Downloads" path="downloads/"/>
+    <external-path name="androidQTest_File" path="file/"/>
+
+</paths>

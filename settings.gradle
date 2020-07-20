@@ -1,0 +1,3 @@
+rootProject.name='AndroidQTest'
+include ':app'
+include ':ImagePicker'

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_actionBar"
+        layout="@layout/include_layout_actionbar" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#303030">
+
+        <TextView
+            android:id="@+id/tv_main_imageFolders"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:drawableRight="@mipmap/icon_album_index"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="@string/all_media"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            tool:text="@string/all_media" />
+
+        <TextView
+            android:id="@+id/checkOriginal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/tv_main_imageFolders"
+            android:drawableStart="@drawable/imagepicker_selector_check_circle"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:text="原图"
+            android:drawablePadding="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="13dp" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_main_images"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_main_bottom"
+        android:layout_below="@id/layout_actionBar"
+        android:background="@android:color/black"
+        android:overScrollMode="never" />
+
+
+</RelativeLayout>

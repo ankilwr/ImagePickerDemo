@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--内置SD卡 Environment.getExternalStorageDirectory() .表示共享所有的目录，也可以指定共享的目录-->
+    <external-path name="imagePicker_Images" path="images/"/>
+    <external-path name="imagePicker_Video" path="video/"/>
+    <external-path name="imagePicker_Audio" path="audio/"/>
+    <external-path name="imagePicker_Downloads" path="downloads/"/>
+    <external-path name="imagePicker_File" path="file/"/>
+</paths>
