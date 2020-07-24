@@ -1,16 +1,28 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
-//apply plugin: 'com.jfrog.bintray'
-//apply plugin: 'com.github.dcendents.android-maven'
 
-publish {
-    repoName = 'imagepicker'//远程仓库名字,不指明，默认是上传到maven
-    userOrg = 'ankilwr'//bintray.com用户名
-    groupId = 'com.mellivora'//jcenter上的路径,bintray上创建Package时填写的Version control项
-    artifactId = 'imagepicker'//项目名称，bintray上创建Package时填写的Name项
-    publishVersion = '1.0.0'//版本号
-    desc = '我的图库'//描述，不重要
-    website = 'https://github.com/ankilwr/imagepicker'//网站，最好有，不重要
+
+ext {
+    bintrayRepo = 'imagepicker'
+    bintrayName = 'imagepicker'
+
+    publishedGroupId = 'com.mellivora.imagepicker'
+    artifact = 'imagepicker'
+    libraryVersion = '1.0.0'
+
+    libraryName = 'imagepicker'
+    libraryDescription = '一个/图片视屏选择而库'
+
+    siteUrl = 'https://github.com/ankilwr/imagepicker'
+    gitUrl = 'https://github.com/ankilwr/imagepicker.git'
+
+
+    developerId = 'mellivora'
+    developerName = 'ankilwr'
+    developerEmail = 'ankilwr@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
 }
 
 
@@ -33,7 +45,6 @@ android {
     lintOptions {
         abortOnError false
     }
-
 }
 
 repositories {
@@ -48,3 +59,7 @@ dependencies {
 }
 
 
+
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
