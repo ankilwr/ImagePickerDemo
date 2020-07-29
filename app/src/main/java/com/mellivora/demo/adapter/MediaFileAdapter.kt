@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mellivora.demo.R
 import com.imagepicket.ImagePickerLoader
-import com.library.imagepicker.data.MediaFile
+import com.mellivora.imagepicker.data.MediaFile
 import kotlinx.android.synthetic.main.item_image.view.*
 
 

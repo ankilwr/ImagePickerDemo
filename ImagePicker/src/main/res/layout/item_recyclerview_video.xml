@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.library.imagepicker.view.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.mellivora.imagepicker.view.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/srl_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="1dp">
 
-    <com.library.imagepicker.view.SquareImageView
+    <com.mellivora.imagepicker.view.SquareImageView
         android:id="@+id/iv_item_image"
         android:layout_width="match_parent"
         android:layout_height="90dp"
@@ -46,4 +46,4 @@
     </LinearLayout>
 
 
-</com.library.imagepicker.view.SquareRelativeLayout>
+</com.mellivora.imagepicker.view.SquareRelativeLayout>

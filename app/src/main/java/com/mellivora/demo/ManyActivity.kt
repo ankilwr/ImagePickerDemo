@@ -11,8 +11,8 @@ import com.base.library.utils.LogUtil
 import com.mellivora.demo.adapter.MediaFileAdapter
 import com.mellivora.demo.adapter.PictureFileAdapter
 import com.imagepicket.ImagePickerLoader
-import com.library.imagepicker.ImagePicker
-import com.library.imagepicker.data.MediaFile
+import com.mellivora.imagepicker.ImagePicker
+import com.mellivora.imagepicker.data.MediaFile
 import kotlinx.android.synthetic.main.activity_many.*
 import kotlinx.coroutines.*
 import top.zibin.luban.Luban

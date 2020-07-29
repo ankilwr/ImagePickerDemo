@@ -1,15 +1,14 @@
 package com.imagepicket
 
 import android.content.Context
-import android.net.Uri
 import android.os.Build
 import android.widget.ImageView
 import android.widget.Toast
 import com.bumptech.glide.load.DecodeFormat
 import com.bumptech.glide.request.RequestOptions
 import com.glide.GlideApp
-import com.library.imagepicker.data.MediaFile
-import com.library.imagepicker.listener.ImageLoader
+import com.mellivora.imagepicker.data.MediaFile
+import com.mellivora.imagepicker.listener.ImageLoader
 
 class ImagePickerLoader : ImageLoader {
 

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.library.imagepicker">
+    package="com.mellivora.imagepicker">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -9,23 +9,23 @@
 
         <!--图片列表Activity-->
         <activity
-            android:name="com.library.imagepicker.activity.ImagePickerActivity"
+            android:name="com.mellivora.imagepicker.activity.ImagePickerActivity"
             android:launchMode="singleTop"
             android:theme="@style/ImagePickerTheme"
             android:screenOrientation="portrait" />
         <!--大图预览Activity-->
         <activity
-            android:name="com.library.imagepicker.activity.ImagePreActivity"
+            android:name="com.mellivora.imagepicker.activity.ImagePreActivity"
             android:theme="@style/ImagePickerTheme"
             android:screenOrientation="portrait" />
         <!--视频预览-->
         <activity
-            android:name="com.library.imagepicker.activity.VideoPlayerActivity"
+            android:name="com.mellivora.imagepicker.activity.VideoPlayerActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <provider
-            android:name=".provider.ImagePickerProvider"
+            android:name="com.mellivora.imagepicker.provider.ImagePickerProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">

@@ -9,16 +9,17 @@ import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.documentfile.provider.DocumentFile
 import com.base.library.utils.LogUtil
 import com.glide.GlideApp
 import com.glide.loadDefault
 import com.imagepicket.ImagePickerLoader
-import com.library.imagepicker.ImagePicker
-import com.library.imagepicker.data.MediaFile
+import com.mellivora.imagepicker.ImagePicker
+import com.mellivora.imagepicker.data.MediaFile
 import com.soundcloud.android.crop.Crop
 import kotlinx.android.synthetic.main.activity_crop.*
 import java.io.File
-import java.net.URI
+
 
 class CropActivity : AppCompatActivity() {
 
@@ -63,13 +64,12 @@ class CropActivity : AppCompatActivity() {
 
                     GlideApp.with(this).loadDefault(media.uri, iv1)
 
-
-//                    val file = File(URI.create(media.uri.toString()))
-//                    if(file.exists()){
-//                        LogUtil.e("测试测试", "文件存在：${media.uri}")
-//                    }else{
-//                        LogUtil.e("测试测试", "文件不存在：${media.uri}")
-//                    }
+                    val documentFile = DocumentFile.fromSingleUri(this, media.uri)
+                    if(documentFile?.exists() == true){
+                        LogUtil.e("测试测试", "文件存在：${media.uri}")
+                    }else{
+                        LogUtil.e("测试测试", "文件不存在：${media.uri}")
+                    }
                     LogUtil.e("测试测试", "文件路径相对路径：${media.path}")
                     LogUtil.e("测试测试", "文件Uri：${media.uri}")
                     //LogUtil.i("测试测试", "文件路径(是否存在:${avatarFile.exists()})  path：${avatarFile.path}")
