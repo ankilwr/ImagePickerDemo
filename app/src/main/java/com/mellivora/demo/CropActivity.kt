@@ -61,28 +61,10 @@ class CropActivity : AppCompatActivity() {
                 100 -> {
                     val pathList: ArrayList<MediaFile> = data.getParcelableArrayListExtra(ImagePicker.EXTRA_SELECT_IMAGES)!!
                     val media = pathList[0]
-
                     GlideApp.with(this).loadDefault(media.uri, iv1)
-
-                    val documentFile = DocumentFile.fromSingleUri(this, media.uri)
-                    if(documentFile?.exists() == true){
-                        LogUtil.e("测试测试", "文件存在：${media.uri}")
-                    }else{
-                        LogUtil.e("测试测试", "文件不存在：${media.uri}")
-                    }
-                    LogUtil.e("测试测试", "文件路径相对路径：${media.path}")
-                    LogUtil.e("测试测试", "文件Uri：${media.uri}")
-                    //LogUtil.i("测试测试", "文件路径(是否存在:${avatarFile.exists()})  path：${avatarFile.path}")
-
+                    //val documentFile = DocumentFile.fromSingleUri(this, media.uri)
                     val temp = getExternalFilesDir("temp")
                     val cropFile = File("$temp/${System.currentTimeMillis()}.jpg")
-                    LogUtil.i("测试测试", "运行版本:${Build.VERSION.SDK_INT}")
-
-//                    cropUri = if(Build.VERSION.SDK_INT >= 24){
-//                        FileProvider.getUriForFile(this@MainActivity, "$packageName.provider", cropFile)
-//                    }else{
-//                        Uri.fromFile(cropFile)
-//                    }
                     cropUri = Uri.fromFile(cropFile)
                     Crop.of(media.uri, cropUri).asSquare().start(this@CropActivity)
                 }
