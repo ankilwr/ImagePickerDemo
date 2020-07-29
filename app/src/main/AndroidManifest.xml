@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.androidqtest">
+    package="com.mellivora.demo">
 
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -39,7 +39,7 @@
         </provider>
 
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.mellivora.demo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -47,10 +47,10 @@
         </activity>
 
         <activity
-            android:name=".CropActivity"
+            android:name="com.mellivora.demo.CropActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ManyActivity"
+            android:name="com.mellivora.demo.ManyActivity"
             android:screenOrientation="portrait" />
 
     </application>

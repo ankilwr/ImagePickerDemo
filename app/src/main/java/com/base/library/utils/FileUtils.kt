@@ -11,7 +11,7 @@ import android.provider.MediaStore
 import android.text.TextUtils
 import androidx.annotation.DrawableRes
 import androidx.core.content.FileProvider
-import com.example.androidqtest.R
+import com.mellivora.demo.R
 import java.io.File
 import java.io.FileOutputStream
 import java.math.BigDecimal

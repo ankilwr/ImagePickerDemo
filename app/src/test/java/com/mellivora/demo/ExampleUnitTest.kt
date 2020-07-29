@@ -1,4 +1,4 @@
-package com.example.androidqtest
+package com.mellivora.demo
 
 import org.junit.Test
 

@@ -1,12 +1,10 @@
-package com.example.androidqtest.adapter
+package com.mellivora.demo.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.androidqtest.R
+import com.mellivora.demo.R
 import com.glide.GlideApp
-import com.imagepicket.ImagePickerLoader
-import com.library.imagepicker.data.MediaFile
 import kotlinx.android.synthetic.main.item_image.view.*
 import java.io.File
 

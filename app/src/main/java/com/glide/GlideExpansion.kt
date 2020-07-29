@@ -3,7 +3,7 @@ package com.glide
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.widget.ImageView
-import com.example.androidqtest.R
+import com.mellivora.demo.R
 
 
 fun GlideRequests.loadDefault(path: String?, imageView: ImageView, placeImage: Int = R.drawable.default_image) {

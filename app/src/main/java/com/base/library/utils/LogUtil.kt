@@ -1,7 +1,7 @@
 package com.base.library.utils
 
 import android.util.Log
-import com.example.androidqtest.BuildConfig
+import com.mellivora.demo.BuildConfig
 
 object LogUtil {
 

@@ -1,0 +1,28 @@
+
+ext {
+    bintrayRepo = 'imagepicker'
+    bintrayName = 'imagepicker'
+
+    publishedGroupId = 'com.mellivora'
+    artifact = 'imagepicker'
+    libraryVersion = '1.0.0'
+
+    libraryName = 'imagepicker'
+    libraryDescription = 'A image/video picker library'
+
+    siteUrl = 'https://github.com/ankilwr/imagepicker'
+    gitUrl = 'https://github.com/ankilwr/imagepicker.git'
+
+
+    developerId = 'ankilwr'
+    developerName = 'Mellivora Capensis'
+    developerEmail = 'ankilwr@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
