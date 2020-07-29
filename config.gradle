@@ -10,8 +10,8 @@ ext {
     libraryName = 'imagepicker'
     libraryDescription = 'A image/video picker library'
 
-    siteUrl = 'https://github.com/ankilwr/imagepicker'
-    gitUrl = 'https://github.com/ankilwr/imagepicker.git'
+    siteUrl = 'https://github.com/ankilwr/ImagePickerDemo'
+    gitUrl = 'https://github.com/ankilwr/ImagePickerDemo.git'
 
 
     developerId = 'ankilwr'
