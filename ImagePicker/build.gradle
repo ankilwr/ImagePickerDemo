@@ -5,7 +5,7 @@ ext {
     bintrayRepo = 'imagepicker'
     bintrayName = 'imagepicker'
 
-    publishedGroupId = 'com.mellivora.imagepicker'
+    publishedGroupId = 'com.mellivora'
     artifact = 'imagepicker'
     libraryVersion = '1.0.0'
 
@@ -16,8 +16,8 @@ ext {
     gitUrl = 'https://github.com/ankilwr/imagepicker.git'
 
 
-    developerId = 'mellivora'
-    developerName = 'ankilwr'
+    developerId = 'ankilwr'
+    developerName = 'Mellivora Capensis'
     developerEmail = 'ankilwr@gmail.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
@@ -31,7 +31,7 @@ android {
 
     compileSdkVersion 29
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 17
         targetSdkVersion 29
     }
 
