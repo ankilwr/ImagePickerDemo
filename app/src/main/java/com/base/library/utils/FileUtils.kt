@@ -12,6 +12,7 @@ import android.text.TextUtils
 import androidx.annotation.DrawableRes
 import androidx.core.content.FileProvider
 import com.mellivora.demo.R
+import com.mellivora.imagepicker.provider.ImagePickerProvider
 import java.io.File
 import java.io.FileOutputStream
 import java.math.BigDecimal
@@ -53,9 +54,9 @@ object FileUtils {
         return file
     }
 
-    //获取SD缓存路径
+
+    //获取SD缓存路径(获取Android10以下的api, 10以上不推荐使用)
     private fun getSdCache(): File {
-        context.getExternalFilesDir("")
         val path = if (hasSdCard()) {
             Environment.getExternalStorageDirectory().toString() + File.separator + sdCache
         } else {
@@ -68,36 +69,36 @@ object FileUtils {
 
     /** 获取SD卡缓存路径(No Delete)  */
     fun getSdCachePath(folderName: String): String {
-        return getSdCache().path + File.separator + folderName
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            context.getExternalFilesDir(folderName)!!.path
+        } else {
+            getSdCache().path + File.separator + folderName
+        }
     }
 
     /** 获取应用缓存文件夹(No Delete)  */
     fun getSdCache(folder: String): File {
-        val path = getSdCache().path + File.separator + folder
-        val dir = File(path)
-        if (!dir.exists()) dir.mkdirs()
-        return dir
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            context.getExternalFilesDir(folder)!!
+        } else {
+            val path = getSdCache().path + File.separator + folder
+            val dir = File(path)
+            if (!dir.exists()) dir.mkdirs()
+            dir
+        }
     }
 
     /**
      * 返回的File可能会不存在
      */
-    fun getSdCacheFile(context: Context, folderName: String, fileName: String): File {
-        val folderPath = getSdCache().path + File.separator + folderName
-        val dir = File(folderPath)
-        if (!dir.exists()) dir.mkdirs()
-        val path = dir.path + File.separator + fileName
+    fun getSdCacheFile(folderName: String, fileName: String): File {
+        val path = getSdCache(folderName).path + File.separator + fileName
         return File(path)
     }
 
 
     fun getSdCacheFilePath(folderName: String, fileName: String): String {
-        val folderPath = getSdCache().path + File.separator + folderName
-        val dir = File(folderPath)
-        if (!dir.exists()) {
-            dir.mkdirs()
-        }
-        return dir.path + File.separator + fileName
+        return getSdCache(folderName).path + File.separator + fileName
     }
 
 
